@@ -17,6 +17,10 @@ class App extends Component {
     this.setState({ searchfield: event.target.value });
   };
 
+  componentDidMount() {
+    document.title = 'HOWD Robofriends';
+  }
+
   render() {
     const filterRobo = this.state.robots.filter((robot) => {
       let name = robot.name.toLowerCase();
